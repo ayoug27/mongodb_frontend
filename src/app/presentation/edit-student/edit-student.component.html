@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Edit an Employee</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-student-form
+      [initialState]="student()"
+      (formSubmitted)="editStudent($event)"
+    ></app-student-form>
+  </mat-card-content>
+</mat-card>

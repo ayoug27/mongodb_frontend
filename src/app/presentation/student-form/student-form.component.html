@@ -1,0 +1,56 @@
+<form
+  class="student-form"
+  autocomplete="off"
+  [formGroup]="studentForm"
+  (submit)="submitForm()"
+>
+  <mat-form-field>
+    <mat-label>First name</mat-label>
+    <input matInput placeholder="First name" formControlName="firstName" required />
+    @if (firstName?.invalid) {
+    <mat-error>First Name must be at least 3 characters long.</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last name</mat-label>
+    <input matInput placeholder="Last name" formControlName="lastName" required />
+    @if (lastName?.invalid) {
+    <mat-error>Last Name must be at least 3 characters long.</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Age</mat-label>
+    <input
+      matInput
+      placeholder="Age"
+      formControlName="age"
+      type="number"
+      required
+    />
+    @if (age?.invalid) {
+    <mat-error>Age must be positive and a number.</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-radio-group formControlName="sector" aria-label="Select an option">
+    <mat-radio-button name="sector" value="INFO" required
+    >INFO</mat-radio-button
+    >
+    <mat-radio-button name="sector" value="TC"
+    >TC</mat-radio-button>
+    <mat-radio-button name="sector" value="GMP"
+    >GMP</mat-radio-button>
+    <mat-radio-button name="sector" value="GEA"
+    >GEA</mat-radio-button>
+  </mat-radio-group>
+  <br />
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="studentForm.invalid"
+  >
+    Add
+  </button>
+</form>
