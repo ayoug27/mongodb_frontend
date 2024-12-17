@@ -10,3 +10,20 @@
 .mat-mdc-form-field {
   width: 100%;
 }
+.submit-button{
+  background-color: black !important;
+  border-radius: 20px;
+  width: 100%;
+  color: white !important;
+}
+
+.submit-button:hover {
+  background-color: cornflowerblue !important;
+}
+
+.student-form {
+  background-color: white;
+  opacity: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}

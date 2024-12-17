@@ -6,21 +6,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
+
 @Component({
   selector: 'app-students-list',
   standalone: true,
   imports: [RouterModule, MatTableModule, MatButtonModule, MatCardModule],
-  styles: [
-    `
-      table {
-        width: 100%;
-
-        button:first-of-type {
-          margin-right: 1rem;
-        }
-      }
-    `,
-  ],
+  styleUrls: ['./students-list.component.css'],
   template: `
     <mat-card>
       <mat-card-header>
@@ -65,8 +56,8 @@ import { MatCardModule } from '@angular/material/card';
         </table>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button color="primary" [routerLink]="['new']">
-          Add a New Employee
+        <button class="add-button" mat-raised-button color="primary" [routerLink]="['new']">
+          Add a New Student
         </button>
       </mat-card-actions>
     </mat-card>

@@ -6,8 +6,26 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
 <body>
-  <app-root></app-root>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    VANTA.WAVES({
+      el: "#home", // Cible l'élément avec l'ID "home"
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x7d7d7d
+    });
+  });
+</script>
+  <app-root>
+  </app-root>
 </body>
 </html>
