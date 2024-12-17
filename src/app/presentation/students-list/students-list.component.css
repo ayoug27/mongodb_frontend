@@ -1,0 +1,27 @@
+mat-card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+mat-card {
+  background-color: white;
+  opacity: 70%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.add-button {
+  margin-left: auto;
+  background-color: cornflowerblue !important;
+  color: white !important;
+  border-radius: 30px;
+}
+
+.add-button:hover {
+  background-color: green !important;
+}
+
+mat-card-title {
+  letter-spacing: 3px;
+}
