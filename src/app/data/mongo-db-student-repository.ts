@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class MongoDbStudentRepository implements StudentRepository{
-  private url = "http://localhost:5200";
+  private url = "https://675fe9a01f7ad2426999e180.mockapi.io/";
 
   constructor(private httpClient: HttpClient) { }
 

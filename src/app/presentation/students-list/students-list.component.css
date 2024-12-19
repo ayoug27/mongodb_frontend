@@ -4,11 +4,19 @@ mat-card-title {
 }
 
 mat-card {
-  background-color: white;
-  opacity: 70%;
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px !important;
+
+}
+
+mat-card-content {
+  padding: 20px !important;
+}
+
+p {
+  padding: 20px !important;
 }
 
 .add-button {
@@ -22,6 +30,35 @@ mat-card {
   background-color: green !important;
 }
 
-mat-card-title {
+.title-form {
   letter-spacing: 3px;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px !important;
+}
+
+.edit-button {
+  background-color: #ACACAC !important;
+  color: white !important;
+  border-radius: 10px;
+}
+
+.delete-button {
+  background-color: #ACACAC !important;
+  color: white !important;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.edit-button:hover {
+  background-color: red !important;
+}
+
+.delete-button:hover {
+  background-color: green !important;
+}
+
+mat-cell {
+  padding: 10px !important;
 }

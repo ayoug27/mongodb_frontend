@@ -15,36 +15,37 @@ import { MatCardModule } from '@angular/material/card';
   template: `
     <mat-card>
       <mat-card-header>
-        <mat-card-title>Students List</mat-card-title>
+        <mat-card-title><p class="title-form">Students List</p></mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <table mat-table [dataSource]="students$()">
           <ng-container matColumnDef="col-firstname">
-            <th mat-header-cell *matHeaderCellDef>First Name</th>
-            <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
+            <th mat-header-cell *matHeaderCellDef><p>First Name</p></th>
+            <td mat-cell *matCellDef="let element"><p>{{ element.firstName }}</p></td>
           </ng-container>
           <ng-container matColumnDef="col-lastname">
-            <th mat-header-cell *matHeaderCellDef>Last Name</th>
-            <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+            <th mat-header-cell *matHeaderCellDef><p>Last Name</p></th>
+            <td mat-cell *matCellDef="let element"><p>{{ element.lastName }}</p></td>
           </ng-container>
           <ng-container matColumnDef="col-age">
-            <th mat-header-cell *matHeaderCellDef>Age</th>
-            <td mat-cell *matCellDef="let element">{{ element.age }}</td>
+            <th mat-header-cell *matHeaderCellDef><p>Age</p></th>
+            <td mat-cell *matCellDef="let element"><p>{{ element.age }}</p></td>
           </ng-container>
           <ng-container matColumnDef="col-sector">
-            <th mat-header-cell *matHeaderCellDef>Sector</th>
-            <td mat-cell *matCellDef="let element">{{ element.sector }}</td>
+            <th mat-header-cell *matHeaderCellDef><p>Sector</p></th>
+            <td mat-cell *matCellDef="let element"><p>{{ element.sector }}</p></td>
           </ng-container>
-          <ng-container matColumnDef="col-action">
-            <th mat-header-cell *matHeaderCellDef>Action</th>
-            <td mat-cell *matCellDef="let element">
-              <button mat-raised-button [routerLink]="['edit/', element._id]">
+          <ng-container matColumnDef="col-action" >
+            <th mat-header-cell *matHeaderCellDef><p>Action</p></th>
+            <td mat-cell *matCellDef="let element" >
+              <button mat-raised-button [routerLink]="['edit/', element._id]" class="edit-button">
                 Edit
               </button>
               <button
                 mat-raised-button
                 color="warn"
                 (click)="deleteStudent(element._id || '')"
+                class="delete-button"
               >
                 Delete
               </button>
